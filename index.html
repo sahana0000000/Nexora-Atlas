@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora Atlas - Explore Sri Lanka</title>
+    <meta name="description" content="Discover the beauty of Sri Lanka with Nexora Atlas. Premium tours, budget packages, and unforgettable experiences across 25 districts.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#059669', // Emerald 600
+                            dark: '#0F172A', // Slate 900
+                            gold: '#D97706', // Amber 600
+                            light: '#F8FAFC', // Slate 50
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans text-slate-800 bg-slate-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white tracking-wide">
+                Nexora <span class="text-brand-gold">Atlas</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-white hover:text-brand-gold transition">Home</a>
+                <a href="destinations.html" class="text-white hover:text-brand-gold transition">Destinations</a>
+                <a href="packages.html" class="text-white hover:text-brand-gold transition">Packages</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-gold text-white rounded-full hover:bg-yellow-600 transition shadow-lg transform hover:scale-105">Book Now</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-2xl" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-md hidden flex-col items-center py-6 space-y-4" id="mobile-menu">
+            <a href="index.html" class="text-white text-lg">Home</a>
+            <a href="destinations.html" class="text-white text-lg">Destinations</a>
+            <a href="packages.html" class="text-white text-lg">Packages</a>
+            <a href="contact.html" class="text-brand-gold text-lg font-bold">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1586616212166-57422f2834b6?q=80&w=2070&auto=format&fit=crop" alt="Sri Lanka Landscape" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-slate-900/90"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto" data-aos="fade-up">
+            <span class="text-brand-gold font-semibold tracking-widest uppercase mb-4 block">Welcome to Paradise</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Discover the Soul of <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-300">Sri Lanka</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto">
+                From the golden beaches of Mirissa to the misty hills of Ella. Experience the 25 districts of wonder with Nexora Atlas.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="packages.html" class="px-8 py-4 bg-brand-gold text-white rounded-full font-semibold text-lg shadow-xl hover:bg-yellow-600 transition transform hover:-translate-y-1">
+                    Explore Packages
+                </a>
+                <a href="destinations.html" class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-full font-semibold text-lg hover:bg-white/20 transition">
+                    View Destinations
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-gold/20 rounded-full z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1546522533-cbe27c815ec5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sri Lankan Elephant" class="rounded-2xl shadow-2xl relative z-10 w-full h-[500px] object-cover hover:scale-105 transition duration-500">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl z-20 hidden md:block">
+                        <p class="text-4xl font-bold text-brand-gold">25+</p>
+                        <p class="text-sm text-slate-500 font-semibold uppercase">Districts Covered</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-sm font-bold text-brand-green uppercase tracking-wide mb-2">Who We Are</h2>
+                    <h3 class="text-4xl font-bold text-brand-dark mb-6">Your Gateway to the Pearl of the Indian Ocean</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Nexora Atlas isn't just a travel agency; we are your local companions. Whether you're looking for a budget-friendly backpacking adventure or a luxurious mid-range getaway, we curate experiences that touch your soul.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check-circle text-brand-green mr-3"></i> Expert Local Guides
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check-circle text-brand-green mr-3"></i> Tailored for Western Travelers
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check-circle text-brand-green mr-3"></i> Sustainable & Eco-Friendly
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="text-brand-gold font-semibold hover:text-brand-green transition group">
+                        Plan My Trip <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations Preview -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand-green uppercase tracking-wide mb-2">Destinations</h2>
+                <h3 class="text-4xl font-bold text-brand-dark">Must-Visit Places</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
+                    <img src="https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=1000&auto=format&fit=crop" alt="Sigiriya" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <h4 class="text-2xl font-bold text-white mb-1">Sigiriya</h4>
+                        <p class="text-slate-300 text-sm mb-4">Ancient Rock Fortress</p>
+                        <span class="text-brand-gold font-semibold text-sm group-hover:underline">Explore <i class="fas fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
+                    <!-- Mirissa / Beach -->
+                    <img src="https://images.unsplash.com/photo-1536093863-7e44a04d2b2d?q=80&w=1000&auto=format&fit=crop" alt="Mirissa Beach" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <h4 class="text-2xl font-bold text-white mb-1">Mirissa</h4>
+                        <p class="text-slate-300 text-sm mb-4">Tropical Beach Paradise</p>
+                        <span class="text-brand-gold font-semibold text-sm group-hover:underline">Explore <i class="fas fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-96">
+                     <!-- Ella / Train -->
+                    <img src="https://images.unsplash.com/photo-1540202403-b7ce9be98158?q=80&w=1000&auto=format&fit=crop" alt="Nine Arch Bridge" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <h4 class="text-2xl font-bold text-white mb-1">Ella</h4>
+                        <p class="text-slate-300 text-sm mb-4">Misty Mountains & Tea</p>
+                        <span class="text-brand-gold font-semibold text-sm group-hover:underline">Explore <i class="fas fa-arrow-right ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="destinations.html" class="inline-block px-8 py-3 border-2 border-brand-green text-brand-green font-semibold rounded-full hover:bg-brand-green hover:text-white transition">View All Locations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Teaser -->
+    <section class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-green/5 skew-x-12 transform translate-x-20"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-sm font-bold text-brand-gold uppercase tracking-wide mb-2">Our Packages</h2>
+                    <h3 class="text-4xl font-bold mb-6">Experience Better for Less</h3>
+                    <p class="text-slate-300 mb-8 leading-relaxed">
+                        We offer carefully curated packages designed for Western travelers who value authentic experiences. Choose from our Budget Explorer or Mid-Range Comfort options.
+                    </p>
+                    <div class="flex flex-col space-y-4">
+                        <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-brand-gold transition cursor-pointer">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold">Budget Explorer</h4>
+                                <span class="bg-green-500/20 text-green-400 text-xs py-1 px-3 rounded-full">Value</span>
+                            </div>
+                            <p class="text-slate-400 text-sm">Perfect for backpackers. Hostels, trains, and street food adventures.</p>
+                        </div>
+                        <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-brand-gold transition cursor-pointer">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold">Mid-Range Comfort</h4>
+                                <span class="bg-brand-gold/20 text-brand-gold text-xs py-1 px-3 rounded-full">Recommended</span>
+                            </div>
+                            <p class="text-slate-400 text-sm">3-Star hotels, private transport, and guided tours.</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="packages.html" class="px-8 py-3 bg-brand-gold text-white rounded-full font-semibold hover:bg-yellow-600 transition">Compare Packages</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1543888746-b3713437d7c6?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl transform translate-y-8 shadow-2xl" alt="Sri Lanka Culture">
+                        <img src="https://images.unsplash.com/photo-1625736300986-578d0f19294e?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl shadow-2xl" alt="Sri Lanka Wildlife">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white tracking-wide block mb-4">
+                        Nexora <span class="text-brand-gold">Atlas</span>
+                    </a>
+                    <p class="text-sm leading-relaxed">
+                        Your trusted partner for exploring the wonders of Sri Lanka. Authentic experiences, verified locations, and unforgettable memories.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-gold transition">Home</a></li>
+                        <li><a href="destinations.html" class="hover:text-brand-gold transition">Destinations</a></li>
+                        <li><a href="packages.html" class="hover:text-brand-gold transition">Packages</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-gold transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Districts</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-gold transition">Colombo</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition">Kandy</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition">Galle</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition">Ella</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <p class="text-sm mb-2"><i class="fas fa-envelope mr-2 text-brand-gold"></i> hello@nexoraatlas.com</p>
+                    <p class="text-sm mb-2"><i class="fas fa-phone mr-2 text-brand-gold"></i> +94 77 123 4567</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-white hover:text-brand-gold transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-brand-gold transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-brand-gold transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 Nexora Atlas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
